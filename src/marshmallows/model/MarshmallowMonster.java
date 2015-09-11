@@ -24,4 +24,12 @@ public class MarshmallowMonster
 		this.monsterHair = monsterHair;
 		this.monsterLegs= monsterLegs;
 	}	
+
+	public String toString()
+	{
+		String monsterInfo = "My monster has " 
+								+ monsterLegs + " legs and its' name is " + monsterName + " He has " + monsterEyes + " eyes, and has no Bellybutton. ";
+		
+		return monsterInfo;
+	}
 }

@@ -8,7 +8,7 @@ public class MonsterController
 {
 	private MarshmallowMonster harryMonster; //Declares a Monster called harryMonster.
 	private MarshmallowMonster userMonster; //Declares a Monster called userMonster.
-	private MonsterDisplay myDisplay;
+	private MonsterDisplay myOutput;
 	private Scanner monsterScanner;
 	
 	
@@ -23,15 +23,17 @@ public class MonsterController
 		
 		
 		monsterScanner = new Scanner(System.in);
-		myDisplay = new MonsterDisplay();
+		myOutput = new MonsterDisplay();
 		harryMonster = new MarshmallowMonster(name, eyes, noses, hasBellyButton, legs, hair);
 	}
 	
 	public void start()
 	{
-		myDisplay.displayInfo(harryMonster.toString());
-		createUserMonster();
-		myDisplay.displayInfo("User monster info: " + userMonster.toString());
+		harryMonster.toString();
+		myOutput.displayMonsterConsole(harryMonster.toString());
+		myOutput.displayMonsterGUI(harryMonster.toString());
+		this.createUserMonster();
+		myOutput.displayMonsterGUI("New monster info: " + userMonster.toString());
 	}
 
 	private void askQuestions()

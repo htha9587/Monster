@@ -2,15 +2,7 @@ package marshmallows.view;
 
 import javax.swing.JOptionPane;
 
-/**
- * This class provides popups for input and output
- * 
- * @author htha9587
- *
- */
-
-public class MonsterDisplay {
-
+public class MonsterGUI {
 	/**
 	 * Provides popup box for asking a question and allows the user to answer
 	 * through text.
@@ -19,11 +11,12 @@ public class MonsterDisplay {
 	 *            supplied question to popup
 	 * @return the user's answer to the supplied question.
 	 */
-
-	public void displayMonsterConsole(String input) {
+	public String getAnswer(String input) {
 		String answer = "";
-		answer = JOptionPane.showInputDialog("My monster info is: " + input);
 
+		answer = JOptionPane.showInputDialog(null, input);
+
+		return answer;
 	}
 
 	/**
@@ -32,8 +25,8 @@ public class MonsterDisplay {
 	 * @param shows
 	 *            displayed text on popup.
 	 */
-	public void displayMonsterGUI(String input) {
-		JOptionPane.showMessageDialog(null, "My monster information is: "
-				+ input);
+
+	public void displayResponse(String input) {
+		JOptionPane.showMessageDialog(null, input);
 	}
 }
